@@ -1,0 +1,9 @@
+.header {
+  background-color: #2b6bd8;
+  display: flex;
+}
+
+.header__title {
+  color: white;
+  margin-left: 2rem;
+}
