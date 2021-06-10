@@ -1,0 +1,16 @@
+.usersContainer {
+  background-color: #fff;
+  align-self: flex-start;
+  border-radius: 4px 4px;
+  margin-left: 25px;
+}
+
+.activeUsersHeader {
+  display: flex;
+  align-items: center;
+  background: #2979ff;
+  border-radius: 4px 4px 0 0;
+  height: 60px;
+  color: white;
+  padding: 0 20px;
+}
