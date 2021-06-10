@@ -2,10 +2,6 @@ import { useEffect, useState } from 'react';
 import './Users.css';
 
 const Users = ({ activeUsers }) => {
-  useEffect(() => {
-    console.log(activeUsers);
-  });
-
   return (
     <div className="usersContainer">
       <header className="activeUsersHeader">Active Users</header>

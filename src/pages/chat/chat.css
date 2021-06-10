@@ -16,8 +16,8 @@
 }
 
 .container {
-  flex: 0 0 35vw;
   display: flex;
+  flex: 0 0 35vw;
   flex-direction: column;
   justify-content: space-between;
   background: #ffffff;

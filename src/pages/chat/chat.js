@@ -35,12 +35,14 @@ const Chat = ({ location }) => {
     });
   }, [ENDPOINT, location.search]);
 
+  //get users in room
   useEffect(() => {
     socket.on('roomData', ({ users }) => {
       setActiveUsers(users);
     });
   }, []);
 
+  //getting messages
   useEffect(() => {
     socket.on('message', (message) => {
       setMessages((messages) => [...messages, message]); //spreading in current messages and adding a new one to it
