@@ -17,8 +17,8 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = 'localhost:5000/';
-  // const ENDPOINT = 'https://akindoju-converse.herokuapp.com/';
+  // const ENDPOINT = 'localhost:5000/';
+  const ENDPOINT = 'https://akindoju-converse.herokuapp.com/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search); //to get data passed in as URL from Join component
