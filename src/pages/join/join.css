@@ -83,10 +83,11 @@ body {
 
 @media (min-width: 320px) and (max-width: 480px) {
   .joinOuterContainer {
-    height: 100%;
+    height: 100vh;
   }
 
   .joinInnerContainer {
+    transform: translateY(-100px);
     width: 90%;
   }
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './join.css';
-import { Link, useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constant/routes';
 import Header from '../../components/Header/Header';
 
@@ -9,8 +9,6 @@ const Join = () => {
   const [room, setRoom] = useState('');
 
   const isInvalid = !name || !room;
-
-  const history = useHistory();
 
   return (
     <div>

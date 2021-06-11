@@ -8,7 +8,7 @@
 .activeUsersHeader {
   display: flex;
   align-items: center;
-  background: #2979ff;
+  background: #2b6bd8;
   border-radius: 4px 4px 0 0;
   height: 60px;
   color: white;
@@ -17,4 +17,21 @@
 
 li {
   list-style: circle;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .usersContainer {
+    order: -1;
+    margin-left: 25px;
+  }
+
+  .activeUsersHeader {
+    display: flex;
+    align-items: center;
+    background: #2b6bd8;
+    border-radius: 4px 4px 0 0;
+    height: 30px;
+    color: white;
+    padding: 0 20px;
+  }
 }
