@@ -17,8 +17,8 @@ const Chat = ({ location }) => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
 
-  const ENDPOINT = 'localhost:5000/';
-  // const ENDPOINT = 'https://akindoju-converse.herokuapp.com/';
+  // const ENDPOINT = 'localhost:5000/';
+  const ENDPOINT = 'https://akindoju-converse.herokuapp.com/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search); //to get data passed in as URL from Join component
@@ -35,17 +35,15 @@ const Chat = ({ location }) => {
     });
   }, [ENDPOINT, location.search]);
 
-  //get users in room
-  useEffect(() => {
-    socket.on('roomData', ({ users }) => {
-      setActiveUsers(users);
-    });
-  }, []);
-
   //getting messages
   useEffect(() => {
     socket.on('message', (message) => {
       setMessages((messages) => [...messages, message]); //spreading in current messages and adding a new one to it
+    });
+
+    //get users in room
+    socket.on('roomData', ({ users }) => {
+      setActiveUsers(users);
     });
   }, []);
 
