@@ -26,3 +26,12 @@
 .onlineIcon {
   margin-right: 5%;
 }
+
+.activeUsersBtn {
+  background-color: rgb(73, 255, 143);
+  border: none;
+  border-radius: 50%;
+  font-size: 12px;
+  margin-right: 20px;
+  cursor: pointer;
+}
