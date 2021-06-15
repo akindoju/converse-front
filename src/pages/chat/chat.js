@@ -18,7 +18,7 @@ const Chat = ({ location }) => {
   const [messages, setMessages] = useState([]);
   const [isActiveUsersBtnClicked, setIsActiveUsersBtnClicked] = useState(false);
 
-  // const ENDPOINT = 'localhost:5000/';
+  // const ENDPOINT = "localhost:5000/";
   const ENDPOINT = "https://akindoju-converse.herokuapp.com/";
 
   useEffect(() => {
