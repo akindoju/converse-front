@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import * as ROUTES from "../../constant/routes";
 import "./join.css";
@@ -7,6 +7,7 @@ import "./join.css";
 const Join = () => {
   const [name, setName] = useState("");
   const [room, setRoom] = useState("");
+  const history = useHistory();
 
   const isInvalid = !name || !room;
 
@@ -33,18 +34,17 @@ const Join = () => {
                 onChange={({ target }) => setRoom(target.value)}
               />
             </div>
-            <Router>
-              {" "}
-              <Link to={`${ROUTES.CHAT}?name=${name}&room=${room}`}>
-                <button
-                  className={isInvalid ? "btn-disabled" : "button mt-20"}
-                  type="submit"
-                  disabled={isInvalid}
-                >
-                  Join Room
-                </button>
-              </Link>
-            </Router>
+            <button
+              className={isInvalid ? "btn-disabled" : "button mt-20"}
+              type="submit"
+              disabled={isInvalid}
+              onClick={(e) => {
+                e.preventDefault();
+                history.push(`${ROUTES.CHAT}?name=${name}&room=${room}`);
+              }}
+            >
+              Join Room
+            </button>
           </form>
         </div>
       </div>
