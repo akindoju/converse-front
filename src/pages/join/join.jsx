@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import './join.css';
-import { Link } from 'react-router-dom';
-import * as ROUTES from '../../constant/routes';
-import Header from '../../components/Header/Header';
+import { useState } from "react";
+import { BrowserRouter as Router, Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
+import * as ROUTES from "../../constant/routes";
+import "./join.css";
 
 const Join = () => {
-  const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
+  const [name, setName] = useState("");
+  const [room, setRoom] = useState("");
 
   const isInvalid = !name || !room;
 
@@ -33,15 +33,18 @@ const Join = () => {
                 onChange={({ target }) => setRoom(target.value)}
               />
             </div>
-            <Link to={`${ROUTES.CHAT}?name=${name}&room=${room}`}>
-              <button
-                className={isInvalid ? 'btn-disabled' : 'button mt-20'}
-                type="submit"
-                disabled={isInvalid}
-              >
-                Join Room
-              </button>
-            </Link>
+            <Router>
+              {" "}
+              <Link to={`${ROUTES.CHAT}?name=${name}&room=${room}`}>
+                <button
+                  className={isInvalid ? "btn-disabled" : "button mt-20"}
+                  type="submit"
+                  disabled={isInvalid}
+                >
+                  Join Room
+                </button>
+              </Link>
+            </Router>
           </form>
         </div>
       </div>
