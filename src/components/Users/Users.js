@@ -1,9 +1,6 @@
 import "./Users.css";
-import { useEffect } from "react";
 
 const Users = ({ activeUsers }) => {
-  useEffect(() => {});
-
   return (
     <div className="usersContainer">
       <header className="activeUsersHeader">Active Users</header>
